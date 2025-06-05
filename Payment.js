@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const mqtt = require("mqtt");
 
 const app = express();
-const PORT = 3000;
+const PORT = 12345;
 
 // MQTT Broker config
 const brokerUrl = "ws://151.106.113.75:8083/mqtt";
