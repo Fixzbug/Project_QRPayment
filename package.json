@@ -16,9 +16,7 @@
   "devDependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
-    "mongoose": "^7.2.2",
     "mqtt": "^4.3.7",
-    "express": "^4.21.2",
-    "mysql2": "^3.11.5"
+    "express": "^4.21.2"
   }
 }
