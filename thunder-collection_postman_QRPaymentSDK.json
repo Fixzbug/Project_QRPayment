@@ -1,0 +1,127 @@
+{
+    "info": {
+        "_postman_id": "bfa8fdef-c711-4ebe-b311-f7c62d73661f",
+        "name": "QRPaymentSDK",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "pay",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "https://makerzcoding.com/PaymentSDK/api/v2/pay.php",
+                    "path": [
+                        "PaymentSDK",
+                        "api",
+                        "v2",
+                        "pay.php"
+                    ],
+                    "protocol": "https",
+                    "host": [
+                        "makerzcoding",
+                        "com"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"type\": \"native_pay\",\n  \"device_id\": \"B0B21C42AA94\",\n  \"total_fee\": 1,\n  \"options\": \"url\"\n}"
+                }
+            }
+        },
+        {
+            "name": "notify",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost/Software/PaymentSDK/api/v2/notify.php",
+                    "path": [
+                        "Software",
+                        "PaymentSDK",
+                        "api",
+                        "v2",
+                        "notify.php"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"code\": 0,\n  \"version\": \"3.0.0\",\n  \"status_code\": \"\",\n  \"msg\": \"ok\",\n  \"time_stamp\": \"2025-06-04T00:05:56.383865 08:00\",\n  \"status_msg\": \"\",\n  \"data\": {\n    \"openid\": \"\",\n    \"channel_order_no\": \"\",\n    \"operator_id\": \"45991\",\n    \"cash_fee_type\": \"THB\",\n    \"ksher_order_no\": \"90020250606005514803068\",\n    \"nonce_str\": \"Uf0DheTmw5HJIyMMRlm2JX0Tv2VLhwgx\",\n    \"time_end\": \"2025-06-04 23:05:55\",\n    \"fee_type\": \"THB\",\n    \"attach\": \"\",\n    \"rate\": \"0.000000\",\n    \"result\": \"SUCCESS\",\n    \"total_fee\": 100,\n    \"appid\": \"mch41109\",\n    \"order_no\": \"20250605235514547503\",\n    \"operation\": \"NATIVE-PAY\",\n    \"device_id\": \"B0B21C42AA94\",\n    \"cash_fee\": 100,\n    \"channel\": \"promptpay\",\n    \"mch_order_no\": \"20250605235514547503\"\n  },\n  \"sign\": \"25c9d6dd955b6c606ca71a7dece43fcf163d5469e6f9d9372427a098e5a2a97a98fda07026410785cae8758e89c53618bfc5c095f847097412825d3e1c3754fc\"\n}"
+                }
+            }
+        },
+        {
+            "name": "verify",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://makerzcoding.com/PaymentSDK/api/v2/verify.php",
+                    "path": [
+                        "PaymentSDK",
+                        "api",
+                        "v2",
+                        "verify.php"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "makerzcoding",
+                        "com"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"type\": \"verify\",\n  \"device_id\": \"B0B21C42AA94\",\n  \"result\": \"SUCCESS\",\n  \"ksher_order_no\": \"90020250605041050697691\",\n  \"mch_order_no\": \"20250605031050463378\",\n  \"total_fee\": 100\n}"
+                }
+            }
+        },
+        {
+            "name": "MQTTVerify",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://151.106.113.75:12345/payment/B0B21C42AA94",
+                    "path": [
+                        "payment",
+                        "B0B21C42AA94"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "151",
+                        "106",
+                        "113",
+                        "75"
+                    ],
+                    "port": "12345"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"result\": \"SUCCESS\",\n  \"ksher_order_no\": \"90020250606004355380345\",\n  \"mch_order_no\": \"20250605234354717175\",\n  \"total_fee\": 1\n}\n"
+                }
+            }
+        }
+    ]
+}

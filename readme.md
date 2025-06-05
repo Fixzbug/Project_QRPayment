@@ -1,5 +1,5 @@
 ### ⏰ ใช้ `pm2` + `--cron` รันตามเวลาที่กำหนด
-
+<!-- http://151.106.113.75:12345/payment/B0B21C42AA94 -->
 ```bash
 pm2 start server.js --name usgs-earthquake-bot --cron "*/10 * * * *"
 
