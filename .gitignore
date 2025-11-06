@@ -1,3 +1,5 @@
-# Ignore the node_modules folder
+# Ignore dependencies
 node_modules/
+
+# Ignore specific Postman collection file
 thunder-collection_postman_QRPaymentSDK.json
